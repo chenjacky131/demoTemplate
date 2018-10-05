@@ -1,0 +1,82 @@
+
+@import 'var.scss';
+.slider{// 轮播图
+    .slide{
+        height: 342px;
+        background-position: center top;
+        background-repeat: no-repeat;
+        &.s1{
+            background-image: url('#{$imgUrl}slider_01.jpg');
+        }
+        &.s2{
+            background-image: url('#{$imgUrl}slider_02.jpg');
+        }
+        &.s3{
+            background-image: url('#{$imgUrl}slider_03.jpg');
+        }
+        &.s4{
+            background-image: url('#{$imgUrl}slider_04.jpg');
+        }
+        &.s5{
+            background-image: url('#{$imgUrl}slider_05.jpg');
+        }
+        &.s6{
+            background-image: url('#{$imgUrl}slider_06.jpg');
+        }
+    }
+    .slick-arrow{
+        position: absolute;
+        top: 0;
+        width: 190px;
+        z-index: 2;
+        bottom: 0;
+        cursor: pointer;
+        color: #fff;
+        background: transparent;
+        border: 0;
+        font-size: 60px;
+        &:hover{
+            background: rgba(0,0,0,0.2);
+        }
+        &.slick-next{
+            right: 0;
+        }
+        &.slick-prev{
+            left: 0;
+        }
+    }
+    .slick-dots{
+        height: 49px;
+        background: #000;
+        position: absolute;
+        left: 0;
+        right: 0;
+        bottom: -49px;
+        z-index: 2;
+        .slick-dotss{
+            float: right;
+            line-height: 49px;
+            li{
+                display: inline-block;
+                width: 10px;
+                height: 10px;
+                vertical-align: middle;
+                margin: 0 2px;
+                font-size: 0;
+                background-color: #cf962a;
+                border-radius: 50%;
+                transition: background ease-in-out .5s;
+                cursor: pointer;
+                button{
+                    background: transparent;
+                    color: transparent;
+                    border: 0;
+
+                }
+                &.slick-active{
+                    background-color: #a90600;
+                }
+            }
+        }
+    }
+}
